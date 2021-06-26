@@ -63,16 +63,18 @@ const Header = () => {
             <li>
               <Link to="/recipe" style={{color:"black"}}>Recipes</Link>
             </li>
+            {/* <Route
+                  render={({ history }) => (
+                    <>
+                      <Searchbox className='ml-auto' history={history} />
+                    </>
+                  )}
+                /> */}
           </ul>
          </Router>
-          </Toolbar>
+        </Toolbar>
         </AppBar>
-      </div>
-        
-         
-
-         
-       
+      </div>       
       </nav>
     </header>
   );

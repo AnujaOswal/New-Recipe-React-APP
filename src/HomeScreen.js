@@ -1,5 +1,6 @@
 import React from "react";
 //import { Link} from "react-router-dom";
+
 import heroimg from "./images/undraw_eating_together_tjhx.svg";
 import "./HomeScreen.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";  
@@ -18,6 +19,7 @@ const HomeScreen = () => {
         <Router>  
         <Link to="/recipe">
           <button className="btn-order" style={{borderRadius:"1px"}}>Browse Recipes</button>
+        
         </Link>
      </Router>  
        
