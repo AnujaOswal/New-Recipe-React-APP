@@ -16,12 +16,12 @@ const HomeScreen = () => {
           The food reflects emotion! Here are some classic recipes from all over
           the world.
         </p>
-        <Router>  
+       
         <Link to="/recipe">
           <button className="btn-order" style={{borderRadius:"1px"}}>Browse Recipes</button>
         
         </Link>
-     </Router>  
+      
        
       </div>
     </div>

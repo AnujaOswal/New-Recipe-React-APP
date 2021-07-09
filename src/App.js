@@ -7,43 +7,35 @@ import Header from './Header.js'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"; 
 import RecipeComponent from './RecipeComponent.js'
 import Form from './Form.js'
+import Add from './Add.js';
 
 function App() {
 
-  const [recipes, setRecipes] = useState([]);
-
-  useEffect(() => {  
-    // Recipe data from the MOCK API
-    fetch("https://60b7292217d1dc0017b89247.mockapi.io/recipe", {
-      method: "GET"
-    })
-      .then((rec) => rec.json())
-      .then((rec) => setRecipes(rec));
-  }, []);
+  
 
   return (
     <div className="App">
       <>
       
-        <Header/>
+      
           <Router>
-            <Switch>  
+            
+          <Header/>
             <>      
-           <Route path="/recipe">
-           <RecipeComponent recipes={recipes} setRecipes={setRecipes}/>
-           </Route>
+          
 
             {/*add recipe page */}
-            <Route path="/addRecipe">
-            <Form recipes={recipes} />
-            </Route>
+            <Route exact path="/" component={HomeScreen}/>
+            <Route path="/recipe" component={RecipeComponent}/>
+            <Route path="/addRecipe" component={Add}/>
+            
      
 
-            <Route exact path="/">
+            {/* <Route exact path="/">
             <HomeScreen/>
-            </Route>
+            </Route> */}
             </> 
-            </Switch>
+          
           </Router>
    
       </>

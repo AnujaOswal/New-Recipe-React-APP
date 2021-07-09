@@ -57,6 +57,8 @@ function RecipeCard({title,image,ingredients,deletekey,id}) {
 
   return (
     <>
+    <div className="col mb-4">
+     
     <Card className={classes.root} >
       <CardHeader
         
@@ -108,6 +110,7 @@ function RecipeCard({title,image,ingredients,deletekey,id}) {
         </CardContent>
       </Collapse>
     </Card>
+    </div>
 </>
   )
 }

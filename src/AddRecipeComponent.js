@@ -1,14 +1,16 @@
 import React from 'react'
+import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 function AddRecipeComponent() {
     return (
-        <div className="addNew">
+      <div className="addNew">
       <div className="add">
-        <i className="fas fa-plus-circle"></i>
+       <AddCircleIcon style=
+       {{fontSize:"80px" ,color:"#4d5baf"}}/>     
       </div>
 
       <div>
-        <h3>add a new recipe</h3>
+        <h3 style={{color:"#4d5baf"}}>Add your Recipe</h3>
       </div>
     </div>
     )

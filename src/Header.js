@@ -52,10 +52,10 @@ const Header = () => {
               <FastfoodIcon/>
             </IconButton>
             <Typography variant="h6" color="inherit">
-              That recipe
+              Recipe Corner
             </Typography>
             
-            <Router>
+   
              <ul className="links">
             <li>
               <Link to="/" style={{color:"black"}}>Home</Link>
@@ -71,7 +71,7 @@ const Header = () => {
                   )}
                 /> */}
           </ul>
-         </Router>
+      
         </Toolbar>
         </AppBar>
       </div>       

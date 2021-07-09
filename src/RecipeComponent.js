@@ -6,8 +6,19 @@ import { Link } from "react-router-dom";
 import AddRecipeComponent from './AddRecipeComponent.js'
 import {Searchbox} from './Searchbox.js'
 
-function RecipeComponent({recipes, setRecipes}){
+function RecipeComponent(){
   // const [searchRecipe, setSearch] = useState("");
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {  
+    // Recipe data from the MOCK API
+    fetch("https://60b7292217d1dc0017b89247.mockapi.io/recipe", {
+      method: "GET"
+    })
+      .then((rec) => rec.json())
+      // .then((rec)=>console.log(rec))
+      .then((rec) => setRecipes(rec));
+  }, []);
    const [searchfood,setSearchfood]=useState("")
    //console.log(recipes)
   const [deletefood,setDeleteFood]=useState("")
@@ -28,9 +39,13 @@ console.log(recipes)
   return(
           
   <>
+
+
+  
+   
+  
       <Searchbox setSearchfood={setSearchfood} />
-      
-     
+    
       {recipes
          .filter((rec)=>{
            if(searchfood==="")
@@ -67,8 +82,9 @@ console.log(recipes)
         <Link to={`/addRecipe`}>
           <AddRecipeComponent />
         </Link>
+      
      {/*container */}
-   
+
    </>
   )
 }
